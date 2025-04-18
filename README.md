@@ -33,17 +33,13 @@ The goal is to create a full scripting interpreter eventually.
    cd interpreter
    ```
 
-2. Compile the interpreter:
+2. Compile the interpreter: Use our Makefile
    ```bash
-   gcc -o interpreter interpreter.c parse.c eval.c -ldl -lm
+   cd interpreter
+   make
    ```
 
-3. Create directories for plugins and scripts:
-   ```bash
-   mkdir plugins scripts
-   ```
-
-4. (Optional) Add custom plugins to the `plugins/` directory as shared libraries (`.so` files).
+3. (Optional) Add custom plugins to the `plugins/` directory as shared libraries (`.so` files).
 
 ### Usage
 
@@ -72,7 +68,7 @@ y + 3
 
 Run the script:
 ```
-> example.script
+> test.script
 ```
 
 #### Example Expressions
@@ -119,7 +115,11 @@ The interpreter supports a plugin system for extending functionality. Plugins ar
 
 2. Compile the plugin into a shared library:
    ```bash
-   gcc -shared -fPIC -o plugins/add.so add_plugin.c
+   gcc -shared -fPIC -o plugins/add.so plugins_c/add_plugin.c
+   ```
+3. (Optional) Compile the interpreter and plugins into a shared library using the Makefile.
+   ```bash
+  make
    ```
 
 3. Restart the interpreter to load the plugin.
@@ -136,6 +136,7 @@ interpreter/
 ├── parse.h       # Parsing interface
 ├── eval.c        # Expression evaluation logic
 ├── eval.h        # Evaluation interface
+├── plugin_c/      # Directory for plugins
 ├── plugins/      # Directory for plugin shared libraries (.so)
 ├── scripts/      # Directory for script files (.script)
 ```
