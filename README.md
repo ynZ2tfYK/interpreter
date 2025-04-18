@@ -4,11 +4,11 @@
 A lightweight, modular mathematical expression interpreter written in C, featuring a dynamic plugin system and support for external scripting. This interpreter can evaluate mathematical expressions, handle variables, and extend functionality through shared library plugins.
 
 # Ide and Deps
-Running and Developing on Debian Trixie
-
 ```bash
 sudo apt install gcc libc6-dev make upx-ucl geany
 ```
+
+Running and Developing on Debian Trixie
 
 ## Summary
 
