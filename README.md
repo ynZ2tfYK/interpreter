@@ -3,6 +3,19 @@
 
 A lightweight, modular mathematical expression interpreter written in C, featuring a dynamic plugin system and support for external scripting. This interpreter can evaluate mathematical expressions, handle variables, and extend functionality through shared library plugins.
 
+# IDE and Deps
+```bash
+sudo apt install gcc libc6-dev make upx-ucl geany
+```
+
+## Summary
+
+- gcc: C compiler
+- libc6-dev: Standard C library (includes libm, libdl, dirent)
+- make: Build tool for Makefile
+- upx-ucl: Compresses binaries
+- geany: Simple IDE for coding
+
 # Goals
 
 The goal is to create a full scripting interpreter eventually.
