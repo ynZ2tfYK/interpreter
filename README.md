@@ -117,9 +117,10 @@ The interpreter supports a plugin system for extending functionality. Plugins ar
    ```bash
    gcc -shared -fPIC -o plugins/add.so plugins_c/add_plugin.c
    ```
+   
 3. (Optional) Compile the interpreter and plugins into a shared library using the Makefile.
    ```bash
-  make
+   make
    ```
 
 3. Restart the interpreter to load the plugin.
@@ -163,7 +164,7 @@ Please include tests and documentation for new features.
 
 ## License
 
-This project is licensed under the WTFPL to License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the WTFPL License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
